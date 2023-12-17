@@ -1,14 +1,14 @@
 #!/bin/bash
 if [ -z "$1" ]; then
-    echo "Use $0 <tunnel ip address> <distance (optional, 1 by default)"
+    echo "Use $0 <tunnel ip address> <distance (optional, 1 by default)>"
     exit
 fi
 
 if [ -z "$2" ]; then
-   d=$2
+   d='1'
 else
    echo 'Distance=1'
-   d=1
+   d=$2
 fi
 
 wget https://antifilter.download/list/ip.lst -O iplist.txt
